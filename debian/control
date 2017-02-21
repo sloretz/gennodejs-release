@@ -1,0 +1,12 @@
+Source: ros-lunar-gennodejs
+Section: misc
+Priority: extra
+Maintainer: Chris Smith <csmith@rethinkrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin, ros-lunar-genmsg
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-lunar-gennodejs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-genmsg
+Description: Javascript ROS message and service generators.
