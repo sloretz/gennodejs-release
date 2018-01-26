@@ -1,0 +1,12 @@
+Source: ros-melodic-gennodejs
+Section: misc
+Priority: extra
+Maintainer: Chris Smith <csmith@rethinkrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-genmsg
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-gennodejs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-genmsg
+Description: Javascript ROS message and service generators.
