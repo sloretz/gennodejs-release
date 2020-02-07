@@ -597,7 +597,7 @@ def write_get_message_size(s, spec, search_path):
                                 if not is_string(f.base_type):
                                     raise Exception('Unexpected field {} with type {} has unknown length'.format(f.name, f.base_type))
                                 # it's a string array!
-                                line_to_write = 'length += 4 + val.length;'
+                                line_to_write = 'length += 4 + _getByteLength(val);'
                             else:
                                 (package, msg_type) = f.base_type.split('/')
                                 samePackage = spec.package == package
@@ -618,7 +618,7 @@ def write_get_message_size(s, spec, search_path):
                                 raise Exception('Unexpected field {} with type {} has unknown length'.format(f.name, f.base_type))
                             # it's a string array!
                             len_constant_length_fields += 4
-                            line_to_write = 'length += object.{}.length;'.format(f.name)
+                            line_to_write = 'length += _getByteLength(object.{});'.format(f.name)
                         else:
                             (package, msg_type) = f.base_type.split('/')
                             samePackage = spec.package == package
@@ -719,7 +719,7 @@ def write_constants(s, spec):
         with Indent(s):
             for c in spec.constants:
                 if is_string(c.type):
-                    s.write('{}: \'{}\','.format(c.name.upper(), c.val))
+                    s.write('{}: \'{}\','.format(c.name.upper(), c.val.replace("'", "\\'")))
                 elif is_bool(c.type):
                     s.write('{}: {},'.format(c.name.upper(), 'true' if c.val else 'false'))
                 else:
