@@ -1,3 +1,26 @@
+## gennodejs (noetic) - 2.0.2-1
+
+The packages in the `gennodejs` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic -t noetic gennodejs` on `Fri, 07 Feb 2020 23:27:13 -0000`
+
+The `gennodejs` package was released.
+
+Version of package(s) in repository `gennodejs`:
+
+- upstream repository: https://github.com/sloretz/gennodejs.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.1`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.18.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## gennodejs (melodic) - 2.0.1-0
 
 The packages in the `gennodejs` repository were released into the `melodic` distro by running `/usr/bin/bloom-release gennodejs --track melodic --rosdistro melodic` on `Fri, 26 Jan 2018 21:42:13 -0000`
